@@ -1,0 +1,235 @@
+#wrap{
+  width: 100%;
+  .header{
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    .navBar{
+      width: 1200px;
+      padding: 0 15px;
+      margin: 0 auto;
+      position: relative;
+      .homeLogo{
+        float:left;
+        height: 65px;
+        box-sizing: border-box;
+        padding-top: 10px;
+      }
+
+      .headerList{
+        margin-top: 10px;
+        .position{
+          width: 151px;
+          height: 41px;
+          box-sizing: border-box;
+          padding: 10px 15px;
+
+          margin-right: 50px;
+          .logo{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url("../image/citypoint.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+          }
+          .city{
+            display: inline-block;
+            font-weight: bold;
+          }
+          .changeCity{
+            font-weight: bold;
+          }
+        }
+        float: right;
+        white-space: nowrap;
+        &>li{
+          display: inline-block;
+          &.active{
+            a{
+              color:#e94840;
+            }
+
+          }
+          a{
+            display: inline-block;
+            padding: 10px 15px;
+            color: #000;
+            &:hover{
+              color: #e94840;
+              transition: color 1s;
+            }
+            &.login{
+              width: 64px;
+              height: 20px;
+              padding: 4px 6px;
+              margin: 5px 0 0 15px;
+              background: #e94840;
+              color: #fff;
+              border-radius: 5px;
+
+            }
+          }
+        }
+      }
+
+    }
+    &.on{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      opacity: 0.8;
+      animation: ani 2s;
+    }
+    @keyframes ani{
+      from{
+        transform:translateY(-70px)
+      }
+      to{
+        transform: translateY(0)
+      }
+    }
+  }
+  .h2{
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 85px;
+    font-size: 18px;
+  }
+  .centerConter{
+    width: 1200px;
+    margin: 0 auto;
+    .leftWrap{
+      width: 970px;
+      float: left;
+      .ulWrap{
+        overflow: hidden;
+        &>li{
+          width: 232px;
+          box-sizing: border-box;
+          border: 1px solid #eaeaea;
+          padding: 10px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          background: #fff;
+          float: left;
+          &:hover{
+            box-shadow: 5px 5px 15px #ccc
+          }
+          .img{
+            width: 210px;
+            height: 210px;
+          }
+          .dj{
+            .icon{
+              width: 18px;
+              display: inline-block;
+              height: 17px;
+              vertical-align: middle;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .title{
+              font-size: 16px;
+              font-weight: 700;
+              margin-right: 1px;
+              color: #121212;
+
+            }
+          }
+          .bottom{
+            font-size: 12px;
+            color: #929292;
+            line-height: 26px;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+    .rightWrap{
+      width:230px ;
+      float: right;
+    }
+  }
+  .getServiceList{
+    width: 100%;
+    height: 152px;
+    margin: 0 auto;
+    text-align: center;
+    span{
+      width: 200px;
+      height: 50px;
+      line-height: 50px;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      margin: 50px 5px;
+      background: #fff;
+      display: inline-block;
+      font-size: 16px;
+      color: #b1b1b1;
+      cursor: pointer;
+      img{
+        width: 12px;
+        height: 7px;
+      }
+    }
+  }
+  .servi{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    .list{
+      display: flex;
+      justify-content: center;
+      .item{
+        margin: 0 20px;
+        .icon{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          vertical-align: middle;
+          margin-right: 10px;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        span{
+          font-size: 18px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .fooer{
+    display: flex;
+    height: 170px;
+    width: 100%;
+    padding-top: 50px;
+    justify-content: center;
+    .hotcity{
+      font-size: 18px;
+      display: inline-block;
+      font-family: "微软雅黑";
+    }
+    .hotList{
+      width: 1090px;
+      line-height: 30px;
+      margin-left: 30px;
+      &>li{
+        display: inline-block;
+        width: 9%;
+        a{
+          color: #898989;
+        }
+
+      }
+    }
+  }
+}

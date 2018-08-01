@@ -1,0 +1,26 @@
+{
+  "name": "daowei",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^4.0.1",
+    "jquery-mousewheel": "^3.1.13",
+    "open": "0.0.5"
+  },
+  "devDependencies": {
+    "gulp-connect": "^5.5.0",
+    "gulp-livereload": "^3.8.1",
+    "less-plugin-autoprefix": "^2.0.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,87 @@
+{{each serveData as value i}}
+<div class="houseHoldWrap">
+  <div class="Household">
+    <div class="navigation">
+      <div class="types">
+        <span>{{value.serviceIndex}}</span>
+      </div>
+      <div class="list">
+        <div class="item">
+          {{each value.serviceType as item }}
+          <div class="tips"><a href="#">{{item}}</a></div>
+          {{/each}}
+        </div>
+        <div class="move"><a href="#">
+          <span class="title">更多服务></span>
+        </a></div>
+      </div>
+    </div>
+    <div class="servicetags">
+      <ul class="listserves">
+        {{each value.shopList as item }}
+        <li class="item">
+          <div class="img">
+            <img src={{item.imgUrl}} alt="">
+          </div>
+          <div class="title">
+            <p>{{item.serviceName}}</p>
+            <div class="detail">
+            {{item.description}}
+            </div>
+          </div>
+          <div class="bottom">
+            <span class="yuan">{{item.price}}元</span>
+            <span class="hour">/小时</span>
+            <span class="look">查看详情</span>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="fws">
+    <a href="#">e城e家家政</a>
+    <a href="#">云家政</a>
+    <a href="#">管家帮</a>
+    <a href="#">洁道夫</a>
+    <a href="#">小羽佳家政</a>
+    <a href="#">水动力除螨</a>
+    <a href="#">夺天工家政</a>
+    <a href="#">杀虫OK哥</a>
+    <a href="#">超级阿姨</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">夺天工家政</a>
+    <a href="#">杀虫OK哥</a>
+    <a href="#">超级阿姨</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">杀虫OK哥</a>
+    <a href="#">超级阿姨</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">夺天工家政</a>
+    <a href="#">杀虫OK哥</a>
+    <a href="#">超级阿姨</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">杀虫OK哥</a>
+    <a href="#">超级阿姨</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">夺天工家政</a>
+    <a href="#">杀虫OK哥</a>
+    <a href="#">超级阿姨</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+    <a href="#">e城e家家政</a>
+  </div>
+
+</div>
+{{/each}}

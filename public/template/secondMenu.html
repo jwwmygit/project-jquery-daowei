@@ -1,0 +1,13 @@
+{{each serveData as value}}
+<li>
+  <a href="#">
+    <span>{{value.serviceIndex}}</span>
+    <span class="right"></span>
+  </a>
+  <ul class="seconedList">
+    {{each value.serviceType as item}}
+    <li>{{item}}</li>
+    {{/each}}
+  </ul>
+</li>
+{{/each}}

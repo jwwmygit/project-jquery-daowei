@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./css/ServiceProviders.css">
+  <link rel="stylesheet" href="./css/assets/reset.css">
+</head>
+<body>
+<script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="./js/template.js"></script>
+<script type="text/javascript" src="http://www.superslide2.com/SuperSlide.2.1.2/jquery.SuperSlide.2.1.2.js"></script>
+<div id="wrap">
+  <div class="homeHeader">
+    <div class="header">
+      <nav class="navBar clearfix">
+        <div class="homeLogo">
+          <img src="./image/logo@2x.png" alt="">
+        </div>
+        <ul class="headerList">
+          <li class="position">
+            <span class="logo"></span>
+            <span class="city">北京</span>
+            <span class="changeCity">切换城市</span>
+          </li>
+          <li class="main active" >
+            <a href="./index.html">首页</a>
+          </li>
+          <li>
+            <a href="#">到位APP</a>
+          </li>
+          <li>
+            <a href="./ServiceProviders.html">服务商</a>
+          </li>
+          <li>
+            <a href="#">商家入驻</a>
+          </li>
+          <li>
+            <a href="#">关于我们</a>
+          </li>
+          <li >
+            <a href="#" class="login">商家登录</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+  <h2 class="h2">服务商</h2>
+  <div class="centerConter clearfix">
+    <div class="leftWrap">
+      <ul class="ulWrap">
+      </ul>
+    </div>
+    <div class="rightWrap">
+      <div >
+        <img src="./image/tuijianfuwushang_03.jpg" alt="">
+      </div>
+      <div >
+        <div >
+          <img src="./image/tuijianfuwushang_06.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="getServiceList">
+      <span class="more">
+        查看更多商家
+        <img src="./image/timg.jpg" alt="">
+      </span>
+  </div>
+  <div class="servi">
+    <div class="list">
+      <div class="item">
+        <span class="icon">
+          <img src="./image/anquan.jpg" alt="">
+        </span>
+        <span>优选服务</span>
+      </div>
+      <div class="item">
+        <span class="icon">
+          <img src="./image/anquan.jpg" alt="">
+        </span>
+        <span>全程保障</span>
+      </div>
+      <div class="item">
+        <span class="icon">
+          <img src="./image/anquan.jpg" alt="">
+        </span>
+        <span>安全无忧</span>
+      </div>
+    </div>
+  </div>
+  <div class="fooer">
+    <span class="hotcity">热门城市</span>
+    <ul class="hotList">
+      <li><a href="#">北京</a></li>
+      <li><a href="#">上海</a></li>
+      <li><a href="#">广州</a></li>
+      <li><a href="#">深圳</a></li>
+      <li><a href="#">成都</a></li>
+      <li><a href="#">天津</a></li>
+      <li><a href="#">南京</a></li>
+      <li><a href="#">杭州</a></li>
+      <li><a href="#">重庆</a></li>
+      <li><a href="#">苏州</a></li>
+      <li><a href="#">武汉</a></li>
+      <li><a href="#">长沙</a></li>
+      <li><a href="#">济南</a></li>
+      <li><a href="#">郑州</a></li>
+      <li><a href="#">温州</a></li>
+      <li><a href="#">南宁</a></li>
+      <li><a href="#">贵阳</a></li>
+      <li><a href="#">昆明</a></li>
+      <li><a href="#">太原</a></li>
+      <li><a href="#">哈尔滨</a></li>
+      <li><a href="#">哈尔滨</a></li>
+      <li><a href="#">石家庄</a></li>
+      <li><a href="#">石家庄</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+      <li><a href="#">北京</a></li>
+
+    </ul>
+  </div>
+
+</div>
+<script type="text/html" id="list">
+    {{each data as value}}
+    <li><a href="./businessDetail.html">
+      <img src={{value.imgUrl}} alt="" class="img">
+      <div class="dj">
+            <span class="icon">
+              <img src='./image/home1.png' alt="">
+            </span>
+        <span class="title">{{value.title}}</span>
+      </div>
+      <div class="bottom">
+        <span class="count">已接单{{value.orderCount}}单</span>
+        <span class="good">好评{{value.positiveRate}}%</span>
+      </div>
+    </a></li>
+     {{/each}}
+</script>
+<script type="text/javascript">
+    $(function () {
+        $('body').scroll(function(){//开始监听滚动条
+            //获取当前滚动条高度
+            var topp = $('body').scrollTop();
+            //用于调试 弹出当前滚动条高度
+            //alert(topp);
+            //判断如果滚动条大于90则弹出 "ok"
+            if(topp>65){
+                $('#wrap .header').addClass('on')
+            }
+            if(topp===0){
+                $('#wrap .header').removeClass('on')
+            }
+        })
+
+        //请求模板数据
+        $.get("http://localhost:3000/service",function (data) {
+            console.log(data)
+            let htm=template('list',{data})
+            $("#wrap .centerConter .leftWrap .ulWrap").append(htm)
+
+        })
+    })
+</script>
+</body>
+</html>

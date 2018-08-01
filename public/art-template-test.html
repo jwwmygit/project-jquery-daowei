@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<ul id="list">
+
+</ul>
+<script id="text1" type="text/html" >
+{{ for(var i=0;i<5;i++) }}
+{{i}}
+{{/for}}
+</script>
+<script id="test" type="text/html">
+  <h1>{{title}}</h1>
+  <ul>
+    {{each data as value i}}
+    <li>索引 {{i + 1}} ：{{value.name}}</li>
+    {{/each}}
+  </ul>
+</script>
+<script type="text/javascript" src="./js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="./js/template.js"></script>
+<script type="text/javascript">
+    $(function () {
+       let data=[
+            {name:'ss'},
+            {name:'ss1'},
+            {name:'ss2'},
+            {name:'ss3'},
+            {name:'ss4'},
+        ];
+        let obj={data}
+        console.log(obj)
+//        var data = {
+//            title: '标签',
+//            list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+//        };
+//        var html = template('test', data);
+//        document.getElementById('list').innerHTML = html;
+//       console.log(template)
+
+      let htm=template('test',obj);
+      let htm2=template('text1',obj);
+        $('body').append(htm)
+     console.log(htm2)
+    })
+</script>
+</body>
+</html>
